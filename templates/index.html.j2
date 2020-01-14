@@ -49,52 +49,28 @@ right now.
 
 <div id='about'>
 
-<h2>Long lists are dumb</h2>
-<p>
-We think the race to see who can generate the longest list of onion services is
-silly, so we made the longest possible. We win. Everyone can stop now.
-</p>
-<p>
-Lists are only useful if they are maintained and curated. Most lists out there
-are neither. Therefore they are only marginally more useful than this one.
-</p>
+<h2>Why?</h2>
+<p>So, I removed the previous angst filled rant. Previous author was about half
+right. Manually added lists are somewhat dumb. Do you know what was not? Writing
+an enumeration script against onion space, and backing it up with a random feature.</p>
 
-<h2>There aren't many onion services</h2>
-<p>
-The truth of the matter is <em>there isn't very many online onion services</em>.
-Of those that are online, most aren't worth visiting.
-They're scams, phishing attempts, or low-traffic forums that are going to stop
-existing after a week.
-You should very quickly realize this after using a "real" index or search
-engine.
-No, your inability to find awesome secrets or spooky media is
-<strong>not</strong> because you haven't found the right index/search engine.
-<strong>It's because that stuff isn't there</strong>.
-At least not on the "deep web."
-</p>
+<p>Its like nmap, for .onion sites. So, in this case, fuzzing .onion namespace,
+can then be fed through a spider and accessed with a search engine.</p>
 
-<h2>Please feed this website to crawlers</h2>
-<p>If you have permission.</p>
-<p>
-Many of the indexes out there are written as a little side hobby project.
-They sometimes use crawlers to find additional links and to check if onion
-services are still online periodically.
-I don't necessarily think there's much harm in these side projects.
-But sometimes I don't think the crawlers are that well-written.
-I have a hunch that some of them out there would choke if given a ton of new
-unique domains.
-So if you want to stress test your crawler, feel free to point it at this
-website.
+<p>I originally fed their original .onion hosted version through yacy, and once
+that went offline, I was able to find and fork the code on github.</p>
+
+<p>Best use case: run local, and feed this into <a href=https://www.yacy.net/>yacy</a>,
+your own personal seach engine written in java using solr and elastisearch
 </p>
 
 <h2>Source Code/License</h2>
 <p>
-The source code is available on <a href="http://m6su7s3ir7dxggwg.onion/mello/onion-service-index">
-my Gitea instance</a>. Pull requests are appreciated.
+The source code is available on <a href="https://github.com/GIJack/onion-service-index">
 </p>
 <p>
 Onion Service Index&mdash;a list of literally every onion service ever<br>
-Copyright &copy; 2017 Matt Traudt, Benjamin Mintz
+Copyright &copy; Original - 2017 Matt Traudt, Benjamin Mintz. Forked 2020 GI_Jack
 </p>
 <p>
 This program is free software: you can redistribute it and/or modify
@@ -120,13 +96,11 @@ along with this program. If not, see
 
 <h3>How long did this take to make?</h3>
 <p>Just one afternoon, or two if you count Ben Mintz's contribution.</p>
-
+<p>and about 30 min of GI_Jack's time</p>
 <h3>Does this take a lot of disk space?</h3>
 <p>No. I generate pages as necessary. I cache them too. And no, it should be
 impossible for you to make my server run out of disk space.</p>
 
-<h3>This index sucks</h3>
-<p>Yup. And that's not a question.</p>
 
 <h3>Where can I actually find links?</h3>
 <p>I think <a href='https://ahmia.fi'>Ahmia</a> is the most likely search engine
@@ -149,9 +123,6 @@ serving xyz.onion.</p>
 <p>Tor doesn't handle subdomains like that. If you go through the process of
 hosting two websites at the same onion domain, you'll realize you have to do it
 at the level of the webserver. Tor ignores subdomains.</p>
-
-<h3>Has anybody actually asked you any of these questions?</h3>
-<p>I don't think so.</p>
 
 </div> <!-- FAQ -->
 </body>
