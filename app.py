@@ -25,7 +25,7 @@ def num_to_base(n, b=10, min_length=0):
         digits.append(int(n % b))
         n //= b
     if len(digits) < min_length:
-	    num_zeros = min_length - len(digits)
+        num_zeros = min_length - len(digits)
         digits.extend([0] * num_zeros)
     return digits[::-1]
 
@@ -82,7 +82,8 @@ def random_():
     page = random.randint(1, max_page)
     page_url = '?page={}'
     if v3: page_url += '&v3'
-    return redirect(page_url.format(page), code=302)
+    #return redirect(page_url.format(page), code=302)
+    return redirect(url_for('/'), code=302)
 
 
 if __name__ == '__main__':
