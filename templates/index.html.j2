@@ -9,15 +9,14 @@
 <body>
 {% set v3 = 'v3' in request.args %}
 {% set num_onions = num_onions[v3] %}
-<h1><a href='{{ get_page_url(v3=v3) }}'>The</a> longest and least useful onion index in the galaxy</h1>
+<h1>List all onions: Enumeration of .onion space</h1>
 <p id='about'>
-This website lists <em>literally</em> every onion service.
-If you're looking for a complete index,
-it doesn't get any more complete than this.
+This website lists <em>literally</em> every onion service, and provides a web
+crawlable hyperlink to that .onion. It is procedurally generated.
 <ul>
-<li>We list <a href="/">v2 onions.</a>
-<li>We list <a href="/?v3">v3 onions.</a>
-<li>We list all {{ num_onions }} onions.
+<li><a href="/">v2 onions.</a>(Default)
+<li><a href="/?v3">v3 onions.</a>
+<li>Total namespace: {{ num_onions }} .onions.
 <li>We list onions that used to be online.
 <li>We list onions that are not online yet.
 <li>We list onions that are impossible to access without
