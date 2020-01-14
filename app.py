@@ -4,6 +4,7 @@ sys.path.append('/usr/lib/python3.8/site-packages')
 import random
 from flask import Flask
 from flask import abort, make_response, redirect, render_template, request
+from flask import url_for
 
 app = Flask(__name__)
 
@@ -81,9 +82,10 @@ def random_():
     max_page = num_onions // PAGE_LENGTH
     page = random.randint(1, max_page)
     page_url = '?page={}'
+    page_url = page_url.format(page)
     if v3: page_url += '&v3'
     #return redirect(page_url.format(page), code=302)
-    return redirect(url_for('/'), code=302)
+    return redirect(url_for('index_')+page_url, code=302)
 
 
 if __name__ == '__main__':
