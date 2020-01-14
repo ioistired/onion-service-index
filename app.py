@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import sys
+sys.path.append('/usr/lib/python3.8/site-packages')
 import random
 from flask import Flask
 from flask import abort, make_response, redirect, render_template, request
